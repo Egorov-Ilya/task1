@@ -12,14 +12,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class BlogController extends Controller
 {
     /**
-    * @Route("/{id}", name="show",
+    * @Route("/{id}/{slug}", name="show",
      *     requirements={
      *          "methods": "GET",
      *          "id": "\d+"
      *     }
      *     )
     */
-    public function showAction($id)
+    public function showAction($id, $slug)
     {
     $em = $this->getDoctrine()->getManager();
 
